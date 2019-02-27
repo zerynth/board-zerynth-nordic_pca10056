@@ -1,0 +1,22 @@
+{
+    "dependencies": {},
+    "description": "Add support for Nordic nRF52840 DK",
+    "fullname": "board.zerynth.nordic_pca10056",
+    "git_pointer": "zerynth://zerynth-boards/nordic_pca10056",
+    "info": {
+        "board": "Nordic nRF52840 DK",
+        "chip_manufacturer": "Nordic",
+        "device": "nrf52840",
+        "family_type": "ARM Cortex M4"
+    },
+    "keywords": [
+        "ble",
+        "nordic",
+        "nfc",
+        "nrf52840"
+    ],
+    "repo": "official",
+    "title": "Nordic nRF52840 DK Support Package",
+    "version": "r2.2.0",
+    "whatsnew": " "
+}

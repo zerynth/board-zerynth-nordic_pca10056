@@ -1,0 +1,65 @@
+{
+    "name":"Nordic nRF52840 DK",
+    "target":"nordic_pca10056",
+    "cc":"armgcc",
+    "classes":["nordic_pca10056.NordicPCA10056"],
+    "ram":256,
+    "flash":1024,
+    "family_type":"armcmx",
+    "family_name":"nrf52",
+    "chip_model":"NRF52840",
+    "manual_reset": 1,
+    "preferred_baud":115200,
+    "board_producer":"Nordic",
+    "chip_manifacturer":"Nordic",
+    "architecture":"cortex-m4f",
+    "gccopts":{
+        "arch":["-mcpu=cortex-m4","-mthumb","-mfloat-abi=hard", "-mfpu=fpv4-sp-d16", "-mabi=aapcs"],
+        "cflags": ["-mcpu=cortex-m4","-mthumb", "-Os","-fomit-frame-pointer","-falign-functions=16","-ffunction-sections", "-fdata-sections", "-fno-common", "-Wall", "-Wextra", "-Wstrict-prototypes","-nostdlib","-std=c99"],
+        "defs": [
+            "VM_DEFAULT_THREAD_SIZE=2048",
+            "BOARD_PCA10056",
+            "CONFIG_GPIO_AS_PINRESET",
+            "FLOAT_ABI_HARD",
+            "NRF52840_XXAA",
+            "NRF_SD_BLE_API_VERSION=6",
+            "S140",
+            "SOFTDEVICE_PRESENT",
+            "SWI_DISABLE0",
+            "VHAL_SYSTEM_INIT=1",
+            "MCU_FIXED_VTOR"
+        ]
+    },
+    "relocator":"cortex-m",
+    "type":"board",
+    "virtualizable":"NordicPCA10056",
+    "vm_mini_chunk":64,
+    "uplink_reset": true,
+    "reset_time": 3000,
+    "has_alter_ego":false,
+    "jtag_target":"board/nordic_nrf52_dk.cfg",
+    "jtag_capable": 2,
+    "jtag_class":"NordicPCA10056",
+    "jtag_chipid_command": "reset halt; mdw 0x10000060; mdw 0x10000064",
+    "jtag_chipid_len":2,
+    "jtag_chipid_prefix":"0x100000",
+    "preferred_uplink_with_jtag":{
+        "probe":"jlink"
+    },
+    "preferred_register_with_jtag":{
+        "probe":"jlink"
+    },
+    "preferred_burn_with_jtag":{
+        "probe":"jlink"
+    },
+    "bytecode_offset":"0x055000",
+    "vmstore_offset":"0x053000",
+    "connection":{
+        "baudrate":115200,
+        "parity":"n",
+        "bytesize":8,
+        "stopbits":1,
+        "dsrdtr":false,
+        "rtscts":false
+    }
+}
