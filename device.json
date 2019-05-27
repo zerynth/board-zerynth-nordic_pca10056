@@ -8,7 +8,7 @@
     "family_type":"armcmx",
     "family_name":"nrf52",
     "chip_model":"NRF52840",
-    "manual_reset": 1,
+    "manual_reset": 0,
     "preferred_baud":115200,
     "board_producer":"Nordic",
     "chip_manifacturer":"Nordic",
@@ -34,7 +34,7 @@
     "type":"board",
     "virtualizable":"NordicPCA10056",
     "vm_mini_chunk":64,
-    "uplink_reset": true,
+    "uplink_reset": "reset",
     "reset_time": 3000,
     "has_alter_ego":false,
     "jtag_target":"board/nordic_nrf52_dk.cfg",
@@ -43,17 +43,9 @@
     "jtag_chipid_command": "reset halt; mdw 0x10000060; mdw 0x10000064",
     "jtag_chipid_len":2,
     "jtag_chipid_prefix":"0x100000",
-    "preferred_uplink_with_jtag":{
-        "probe":"jlink"
-    },
-    "preferred_register_with_jtag":{
-        "probe":"jlink"
-    },
-    "preferred_burn_with_jtag":{
-        "probe":"jlink"
-    },
     "bytecode_offset":"0x055000",
     "vmstore_offset":"0x053000",
+    "vm_start": "0x00000000",
     "connection":{
         "baudrate":115200,
         "parity":"n",

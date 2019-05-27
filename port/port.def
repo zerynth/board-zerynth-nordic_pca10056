@@ -6,163 +6,24 @@
 
 const PinInfo const _vhalpinmap[] = {
     //ARDUINO P15+P16
-    /* D0   */ MAKE_PIN(PB, 1,  HAS_EXT | HAS_ICU),
-    /* D1   */ MAKE_PIN(PB, 2,  HAS_EXT | HAS_ICU),
-    /* D2   */ MAKE_PIN(PB, 3,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D3   */ MAKE_PIN(PB, 4,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D4   */ MAKE_PIN(PB, 5,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D5   */ MAKE_PIN(PB, 6,  HAS_EXT | HAS_SPI | HAS_PWM | HAS_ICU),
-    /* D6   */ MAKE_PIN(PB, 7,  HAS_EXT | HAS_SPI | HAS_PWM),
-    /* D7   */ MAKE_PIN(PB, 8,  HAS_EXT | HAS_SPI | HAS_PWM),
-    /* D8   */ MAKE_PIN(PB, 10,  HAS_EXT | HAS_PWM),
-    /* D9   */ MAKE_PIN(PB, 11,  HAS_EXT | HAS_PWM),
-    /* D10   */ MAKE_PIN(PB, 12,  HAS_EXT | HAS_PWM),
-    /* D11   */ MAKE_PIN(PB, 13,  HAS_EXT | HAS_SPI | HAS_PWM),
-    /* D12   */ MAKE_PIN(PB, 14,  HAS_EXT | HAS_SPI | HAS_PWM),
-    /* D13   */ MAKE_PIN(PB, 15,  HAS_EXT | HAS_SPI | HAS_PWM),
-    /* D14   */ MAKE_PIN(PA, 2,  HAS_EXT),
-    /* D15   */ MAKE_PIN(PA, 26,  HAS_EXT | HAS_I2C),
-    /* D16   */ MAKE_PIN(PA, 27,  HAS_EXT | HAS_I2C),
-    //P17
-    /* D17   */ MAKE_PIN(PA, 0,  HAS_EXT),
-    /* D18   */ MAKE_PIN(PA, 1,  HAS_EXT),
-    /* D19   */ MAKE_PIN(PA, 5,  HAS_EXT),
-    /* D20   */ MAKE_PIN(PA, 6,  HAS_EXT | HAS_SER),
-    /* D21   */ MAKE_PIN(PA, 7,  HAS_EXT),
-    /* D22   */ MAKE_PIN(PA, 8,  HAS_EXT | HAS_SER),
-    /* D23   */ MAKE_PIN(PA, 9,  HAS_EXT),
-    /* D24   */ MAKE_PIN(PA, 10,  HAS_EXT),
-    //P24
-    /* D25   */ MAKE_PIN(PA, 11,  HAS_EXT),
-    /* D26   */ MAKE_PIN(PA, 12,  HAS_EXT),
-    /* D27   */ MAKE_PIN(PA, 13,  HAS_EXT),
-    /* D28   */ MAKE_PIN(PA, 14,  HAS_EXT),
-    /* D29   */ MAKE_PIN(PA, 15,  HAS_EXT),
-    /* D30   */ MAKE_PIN(PA, 16,  HAS_EXT),
-    /* D31   */ MAKE_PIN(PA, 17,  HAS_EXT),
-    /* D32   */ MAKE_PIN(PA, 18,  HAS_EXT),
-    /* D33   */ MAKE_PIN(PA, 19,  HAS_EXT),
-    /* D34   */ MAKE_PIN(PA, 20,  HAS_EXT),
-    /* D35  */ MAKE_PIN(PA, 21,  HAS_EXT),
-    /* D36   */ MAKE_PIN(PA, 22,  HAS_EXT),
-    /* D37   */ MAKE_PIN(PA, 23,  HAS_EXT),
-    /* D38   */ MAKE_PIN(PA, 24,  HAS_EXT),
-    /* D39   */ MAKE_PIN(PA, 25,  HAS_EXT),
-    /* D40   */ MAKE_PIN(PB, 0,  HAS_EXT),
-    /* D41   */ MAKE_PIN(PB, 9,  HAS_EXT),
-    //P14
-    /* D42   */ MAKE_PIN(PA, 3,  HAS_EXT | HAS_ADC),
-    /* D43   */ MAKE_PIN(PA, 4,  HAS_EXT | HAS_ADC),
-    /* D44   */ MAKE_PIN(PA, 28,  HAS_EXT | HAS_ADC),
-    /* D45   */ MAKE_PIN(PA, 29,  HAS_EXT | HAS_ADC),
-    /* D46   */ MAKE_PIN(PA, 30,  HAS_EXT | HAS_ADC),
-    /* D47   */ MAKE_PIN(PA, 31,  HAS_EXT | HAS_ADC),
-};
-
-
-const PinClass const _analogclass[] STORED = {
-    /* A0 */ MAKE_PIN_CLASS(42, 1 , 0, 0),
-    /* A1 */ MAKE_PIN_CLASS(43, 2 , 0, 0),
-    /* A2 */ MAKE_PIN_CLASS(44, 4 , 0, 0),
-    /* A3 */ MAKE_PIN_CLASS(45, 5 , 0, 0),
-    /* A4 */ MAKE_PIN_CLASS(46, 6 , 0, 0),
-    /* A5 */ MAKE_PIN_CLASS(47, 7 , 0, 0),
-};
-
-const PinClass const _spiclass[] STORED = {
-    /* MOSI0 */ MAKE_PIN_CLASS(11, 0, 0, 0),
-    /* MISO0 */ MAKE_PIN_CLASS(12, 0, 0, 0),
-    /* SCLK0 */ MAKE_PIN_CLASS(13, 0, 0, 0),
-    /* MOSI1 */ MAKE_PIN_CLASS(7, 0, 0, 0),
-    /* MISO1 */ MAKE_PIN_CLASS(6, 0, 0, 0),
-    /* SCLK1 */ MAKE_PIN_CLASS(5, 0, 0, 0),
-};
-
-const PinClass const _i2cclass[] STORED = {
-    /* SDA0 */ MAKE_PIN_CLASS(15, 0 , 0, 0),
-    /* SCL0 */ MAKE_PIN_CLASS(16, 0 , 0, 0),
-};
-
-const PinClass const _pwmclass[] STORED = {
-    /* PWM0 */ MAKE_PIN_CLASS(2, 0, 0, 0),
-    /* PWM1 */ MAKE_PIN_CLASS(3, 0, 1, 0),
-    /* PWM2 */ MAKE_PIN_CLASS(4, 0, 2, 0),
-    /* PWM3 */ MAKE_PIN_CLASS(5, 0, 3, 0),
-    /* PWM4 */ MAKE_PIN_CLASS(6, 1, 0, 0),
-    /* PWM5 */ MAKE_PIN_CLASS(7, 1, 1, 0),
-    /* PWM6 */ MAKE_PIN_CLASS(8, 1, 2, 0),
-    /* PWM7 */ MAKE_PIN_CLASS(9, 1, 3, 0),
-    /* PWM8 */ MAKE_PIN_CLASS(10, 2, 0, 0),
-    /* PWM9 */ MAKE_PIN_CLASS(11, 2, 1, 0),
-    /* PWM10 */ MAKE_PIN_CLASS(12, 2, 2, 0),
-    /* PWM11 */ MAKE_PIN_CLASS(13, 2, 3, 0),
-};
-
-
-const PinClass const _icuclass[] STORED = {
-    /* PWM0 */ MAKE_PIN_CLASS(0, 0, 0, 0),
-    /* PWM1 */ MAKE_PIN_CLASS(1, 1, 0, 0),
-    /* PWM2 */ MAKE_PIN_CLASS(2, 2, 0, 0),
-    /* PWM3 */ MAKE_PIN_CLASS(3, 3, 0, 0),
-    /* PWM4 */ MAKE_PIN_CLASS(4, 4, 0, 0),
-    /* PWM5 */ MAKE_PIN_CLASS(5, 5, 0, 0),
-};
-
-const PinClass const _canclass[] STORED = {
-};
-
-const PinClass const _serclass[] STORED = {
-    /* RX0 */ MAKE_PIN_CLASS(22, 0, 0, 0),
-    /* TX0 */ MAKE_PIN_CLASS(20, 0, 0, 0),
-
-};
-
-const PinClass const _dacclass[] STORED = {
-};
-
-const PinClass const _ledclass[] STORED = {
-    /* LED0 */ MAKE_PIN_CLASS(27, 0, 0, 0),
-    /* LED1 */ MAKE_PIN_CLASS(28, 0, 0, 0),
-    /* LED2 */ MAKE_PIN_CLASS(29, 0, 0, 0),
-    /* LED3 */ MAKE_PIN_CLASS(30, 0, 0, 0),
-};
-
-const PinClass const _btnclass[] STORED = {
-    /* BTN0 */ MAKE_PIN_CLASS(25, 0, 0, 0),
-    /* BTN1 */ MAKE_PIN_CLASS(26, 0, 0, 0),
-    /* BTN2 */ MAKE_PIN_CLASS(38, 0, 0, 0),
-    /* BTN3 */ MAKE_PIN_CLASS(39, 0, 0, 0),
-};
-
-
-
-
-/* Port definition */
-
-////LAYOUT: nordic_pca10056
-////PERIPHERALS: SERIAL0 ADC0 PWMD0 ICUD0 SPI0 SPI1 I2C0
-////CDEFINES: NRF52840_XXAA
-
-const PinInfo const _vhalpinmap[] = {
-    //ARDUINO P15+P16
-    /* D0   */ MAKE_PIN(PB, 1,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D1   */ MAKE_PIN(PB, 2,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D2   */ MAKE_PIN(PB, 3,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D3   */ MAKE_PIN(PB, 4,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D4   */ MAKE_PIN(PB, 5,  HAS_EXT | HAS_PWM | HAS_ICU),
-    /* D5   */ MAKE_PIN(PB, 6,  HAS_EXT | HAS_SPI | HAS_PWM | HAS_ICU),
-    /* D6   */ MAKE_PIN(PB, 7,  HAS_EXT | HAS_SPI | HAS_PWM),
-    /* D7   */ MAKE_PIN(PB, 8,  HAS_EXT | HAS_SPI | HAS_PWM),
-    /* D8   */ MAKE_PIN(PB, 10,  HAS_EXT | HAS_PWM),
-    /* D9   */ MAKE_PIN(PB, 11,  HAS_EXT | HAS_PWM),
-    /* D10   */ MAKE_PIN(PB, 12,  HAS_EXT | HAS_PWM),
-    /* D11   */ MAKE_PIN(PB, 13,  HAS_EXT | HAS_SPI | HAS_PWM),
+    /* D0   */ MAKE_PIN(PB, 1,  HAS_EXT),
+    /* D1   */ MAKE_PIN(PB, 2,  HAS_EXT),
+    /* D2   */ MAKE_PIN(PB, 3,  HAS_EXT),
+    /* D3   */ MAKE_PIN(PB, 4,  HAS_EXT),
+    /* D4   */ MAKE_PIN(PB, 5,  HAS_EXT),
+    /* D5   */ MAKE_PIN(PB, 6,  HAS_EXT | HAS_SPI),
+    /* D6   */ MAKE_PIN(PB, 7,  HAS_EXT | HAS_SPI),
+    /* D7   */ MAKE_PIN(PB, 8,  HAS_EXT | HAS_SPI),
+    /* D8   */ MAKE_PIN(PB, 10,  HAS_EXT),
+    /* D9   */ MAKE_PIN(PB, 11,  HAS_EXT),
+    /* D10   */ MAKE_PIN(PB, 12,  HAS_EXT),
+    /* D11   */ MAKE_PIN(PB, 13,  HAS_EXT | HAS_SPI),
     /* D12   */ MAKE_PIN(PB, 14,  HAS_EXT | HAS_SPI),
     /* D13   */ MAKE_PIN(PB, 15,  HAS_EXT | HAS_SPI),
     /* D14   */ MAKE_PIN(PA, 2,  HAS_EXT),
     /* D15   */ MAKE_PIN(PA, 26,  HAS_EXT | HAS_I2C),
     /* D16   */ MAKE_PIN(PA, 27,  HAS_EXT | HAS_I2C),
-    //P17
+    // P17
     /* D17   */ MAKE_PIN(PA, 0,  HAS_EXT),
     /* D18   */ MAKE_PIN(PA, 1,  HAS_EXT),
     /* D19   */ MAKE_PIN(PA, 5,  HAS_EXT),
@@ -172,21 +33,21 @@ const PinInfo const _vhalpinmap[] = {
     /* D23   */ MAKE_PIN(PA, 9,  HAS_EXT),
     /* D24   */ MAKE_PIN(PA, 10,  HAS_EXT),
     //P24
-    /* D25   */ MAKE_PIN(PA, 11,  HAS_EXT),
-    /* D26   */ MAKE_PIN(PA, 12,  HAS_EXT),
-    /* D27   */ MAKE_PIN(PA, 13,  HAS_EXT),
-    /* D28   */ MAKE_PIN(PA, 14,  HAS_EXT),
-    /* D29   */ MAKE_PIN(PA, 15,  HAS_EXT),
-    /* D30   */ MAKE_PIN(PA, 16,  HAS_EXT),
+    /* D25   */ MAKE_PIN(PA, 11,  HAS_EXT | HAS_ICU),
+    /* D26   */ MAKE_PIN(PA, 12,  HAS_EXT | HAS_ICU),
+    /* D27   */ MAKE_PIN(PA, 13,  HAS_EXT | HAS_PWM | HAS_ICU),
+    /* D28   */ MAKE_PIN(PA, 14,  HAS_EXT | HAS_PWM | HAS_ICU),
+    /* D29   */ MAKE_PIN(PA, 15,  HAS_EXT | HAS_PWM | HAS_ICU),
+    /* D30   */ MAKE_PIN(PA, 16,  HAS_EXT | HAS_PWM | HAS_ICU),
     /* D31   */ MAKE_PIN(PA, 17,  HAS_EXT),
     /* D32   */ MAKE_PIN(PA, 18,  HAS_EXT),
     /* D33   */ MAKE_PIN(PA, 19,  HAS_EXT),
     /* D34   */ MAKE_PIN(PA, 20,  HAS_EXT),
-    /* D35  */ MAKE_PIN(PA, 21,  HAS_EXT),
+    /* D35   */ MAKE_PIN(PA, 21,  HAS_EXT),
     /* D36   */ MAKE_PIN(PA, 22,  HAS_EXT),
-    /* D37   */ MAKE_PIN(PA, 23,  HAS_EXT),
-    /* D38   */ MAKE_PIN(PA, 24,  HAS_EXT),
-    /* D39   */ MAKE_PIN(PA, 25,  HAS_EXT),
+    /* D37   */ MAKE_PIN(PA, 23,  HAS_EXT | HAS_SPI),
+    /* D38   */ MAKE_PIN(PA, 24,  HAS_EXT | HAS_SPI | HAS_PWM),
+    /* D39   */ MAKE_PIN(PA, 25,  HAS_EXT | HAS_SPI | HAS_PWM),
     /* D40   */ MAKE_PIN(PB, 0,  HAS_EXT),
     /* D41   */ MAKE_PIN(PB, 9,  HAS_EXT),
     //P14
@@ -223,28 +84,23 @@ const PinClass const _i2cclass[] STORED = {
 };
 
 const PinClass const _pwmclass[] STORED = {
-    /* PWM0 */ MAKE_PIN_CLASS(2, 0, 0, 0),
-    /* PWM1 */ MAKE_PIN_CLASS(3, 0, 1, 0),
-    /* PWM2 */ MAKE_PIN_CLASS(4, 0, 2, 0),
-    /* PWM3 */ MAKE_PIN_CLASS(5, 0, 3, 0),
-    /* PWM4 */ MAKE_PIN_CLASS(6, 1, 0, 0),
-    /* PWM5 */ MAKE_PIN_CLASS(7, 1, 1, 0),
-    /* PWM6 */ MAKE_PIN_CLASS(8, 1, 2, 0),
-    /* PWM7 */ MAKE_PIN_CLASS(9, 1, 3, 0),
-    /* PWM8 */ MAKE_PIN_CLASS(10, 2, 0, 0),
-    /* PWM9 */ MAKE_PIN_CLASS(11, 2, 1, 0),
-    /* PWM10 */ MAKE_PIN_CLASS(12, 2, 2, 0),
-    /* PWM11 */ MAKE_PIN_CLASS(13, 2, 3, 0),
+    /* PWM0 */ MAKE_PIN_CLASS(27, 0, 0, 0),
+    /* PWM1 */ MAKE_PIN_CLASS(28, 0, 1, 0),
+    /* PWM2 */ MAKE_PIN_CLASS(29, 0, 2, 0),
+    /* PWM3 */ MAKE_PIN_CLASS(30, 0, 3, 0),
+    /* PWM5 */ MAKE_PIN_CLASS(32, 1, 1, 0),
+    /* PWM10 */ MAKE_PIN_CLASS(38, 2, 2, 0),
+    /* PWM11 */ MAKE_PIN_CLASS(39, 2, 3, 0),
 };
 
 
 const PinClass const _icuclass[] STORED = {
-    /* PWM0 */ MAKE_PIN_CLASS(0, 0, 0, 0),
-    /* PWM1 */ MAKE_PIN_CLASS(1, 1, 0, 0),
-    /* PWM2 */ MAKE_PIN_CLASS(2, 2, 0, 0),
-    /* PWM3 */ MAKE_PIN_CLASS(3, 3, 0, 0),
-    /* PWM4 */ MAKE_PIN_CLASS(4, 4, 0, 0),
-    /* PWM5 */ MAKE_PIN_CLASS(5, 5, 0, 0),
+    /* PWM0 */ MAKE_PIN_CLASS(25, 0, 0, 0),
+    /* PWM1 */ MAKE_PIN_CLASS(26, 1, 0, 0),
+    /* PWM2 */ MAKE_PIN_CLASS(27, 2, 0, 0),
+    /* PWM3 */ MAKE_PIN_CLASS(28, 3, 0, 0),
+    /* PWM4 */ MAKE_PIN_CLASS(29, 4, 0, 0),
+    /* PWM5 */ MAKE_PIN_CLASS(30, 5, 0, 0),
 };
 
 const PinClass const _canclass[] STORED = {
@@ -272,5 +128,3 @@ const PinClass const _btnclass[] STORED = {
     /* BTN2 */ MAKE_PIN_CLASS(38, 0, 0, 0),
     /* BTN3 */ MAKE_PIN_CLASS(39, 0, 0, 0),
 };
-
-

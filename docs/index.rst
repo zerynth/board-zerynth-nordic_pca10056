@@ -66,10 +66,9 @@ The Nordic nRF52840 DK can be programmed through the on-board SEGGER J-Link debu
 * A mass storage device for drag-n-drop programming flash memory
 * A SEGGER J-Link debug channel
 
-**Drivers/rules are needed** for Linux and Mac and can be installed downloading the official `JLink software <https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack>`_.
-
-On Windows everything works out of the box when using default WinUSB driver.
-If `JLink software <https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack>`_ has been previously installed, the driver has be rolled back from jlink to winUSB using `Zadig <https://zadig.akeo.ie>`_ (Options->List All Devices, select the J-Link interfaces and Reinstall Driver).
+**Drivers are needed** (Linux, Mac or Windows) and can be downloaded from the official
+`JLink software <https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack>`_
+page.
 
 .. note:: **For Linux Platform**: to allow the access to serial ports the user needs read/write access to the serial device file. Adding the user to the group, that owns this file, gives the required read/write access:
 
